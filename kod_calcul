@@ -28,8 +28,12 @@ public class credit extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
-
-
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        creditsum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                creditsumActionPerformed(evt);
+            }
+        });
         creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" }));
 
         jLabel1.setText("Сумма кредита:");
@@ -102,7 +106,8 @@ public class credit extends javax.swing.JFrame {
                 calculateActionPerformed(evt);
             }
         });
-
+	totalsum.setEditable(false);
+        totalsum.setFocusable(false);
         jLabel7.setText("Сумма выплаты:");
  
         clearresult.setText("Очистить результат");
@@ -232,7 +237,8 @@ totalsum.setText("");
         });
     }
     // Variables declaration - do not modify                     
-    
+    private javax.swing.JButton calculate;
+    private javax.swing.JButton clearall;
     private javax.swing.JButton clearresult;
     private javax.swing.JComboBox creditperiod;
     private javax.swing.JTextField creditsum;
