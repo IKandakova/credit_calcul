@@ -27,6 +27,7 @@ public class credit extends javax.swing.JFrame {
         clearresult = new javax.swing.JButton(); //очистить результат
         setTitle("Кредитный калькулятор"); //заголовок окна приложения
         setResizable(false); // Нет изменения размеров окна
+        
   	// заголовки 
         creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" })); //параметры для списка
         jLabel1.setText("Сумма кредита:");
@@ -96,7 +97,6 @@ public class credit extends javax.swing.JFrame {
      
         jLabel5.setText("Ежемесячный платеж:"); //наименование элемента jLabel5
         calculate.setText("Рассчитать"); //наименование элемента calculate
-      
         //рассчитать сумму выплат и ежемесячный платеж по кредиту
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +112,7 @@ public class credit extends javax.swing.JFrame {
                 clearresultActionPerformed(evt);
             }
         });
+        
       //размещение компонентов на панели2
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2); //создает для jPanel2
         jPanel2.setLayout(jPanel2Layout); //устанавливает панель
@@ -196,7 +197,6 @@ public class credit extends javax.swing.JFrame {
     t=Math.rint(100.0 * n)/100.0;
     totalsum.setText(Double.toString(a*n)); 
     }  
-    
     // очистить все
     private void clearallActionPerformed(java.awt.event.ActionEvent evt) {                                         
 creditsum.setText("");
@@ -205,14 +205,12 @@ creditperiod.setSelectedItem("4"); //устанавливает при очис�
 payment.setText("");
 totalsum.setText("");
     }    
-    
  // очистить результат
     private void clearresultActionPerformed(java.awt.event.ActionEvent evt) {                                            
         payment.setText("");
         totalsum.setText("");
     }             
-    
-   //основная функция
+    //основная функция
     public static void main(String args[]) {
         try { //блок кода, где отслеживаются ошибки
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -230,7 +228,6 @@ totalsum.setText("");
         } catch (javax.swing.UnsupportedLookAndFeelException ex) { //обрабатываем ошибку
             java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); //исключение, которое указывает на требуемый класс
         }
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new credit().setVisible(true);
@@ -240,7 +237,9 @@ totalsum.setText("");
     // переменные - не изменяются                    
     private javax.swing.JButton calculate;
     private javax.swing.JButton clearall;
-    
+    private javax.swing.JButton clearresult;
+    private javax.swing.JComboBox creditperiod;
+    private javax.swing.JTextField creditsum;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
