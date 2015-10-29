@@ -47,27 +47,7 @@ public class credit extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         //располагает компоненты вдоль горизонтальной оси
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-            .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
-                .addContainerGap() // разрыв между краем контейнер и компонентами
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-                    .addComponent(jLabel1) //добавить компонент jlabel1
-                    .addComponent(clearall)//добавить компонент clearall
-                    .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)) //добавляет компонент creditsum с указанным размером
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED) //разрыв между самыми близкими компонентами
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-                    .addComponent(jLabel2)//добавить компонент jlabel2
-                    .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно	
-                        .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавляет компонент creditperiod с указанным размером
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
-                        .addComponent(jLabel3)) //добавить компонент jlabel3
-                    .addComponent(jLabel4)//добавить компонент jlabel4
-                    .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно	
-                    	.addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить percent
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
-                        .addComponent(jLabel6))) //добавить компонент jlabel6
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
+        
         );
         //располагает и компоненты размеров вдоль вертикальной оси
         jPanel1Layout.setVerticalGroup(
