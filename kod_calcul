@@ -1,9 +1,11 @@
 package calculator_credit;
-
+import javax.swing.DefaultComboBoxModel; //импортируем классы библиотеки SWING
+import javax.swing.JTextField; //импортируем классы библиотеки SWING
 //создание окон в библиотеке SWING, класс credit будет наследником класса JFrame
 public class credit extends javax.swing.JFrame { 
 	public credit() {
-
+	Component();
+ 	}       
 	// компоненты программы 
     private void Component() {
         jPanel1 = new javax.swing.JPanel(); 
@@ -251,4 +253,7 @@ totalsum.setText("");
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField payment;
-   
+   private javax.swing.JTextField percent;
+    private javax.swing.JTextField totalsum;
+}
+
