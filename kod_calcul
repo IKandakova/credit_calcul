@@ -63,10 +63,7 @@ public class credit extends javax.swing.JFrame {
                         .addComponent(jLabel3)) //добавить компонент jlabel3
                     .addComponent(jLabel4)//добавить компонент jlabel4
                     .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно	
-                    	.addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить percent
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
-                        .addComponent(jLabel6))) //добавить компонент jlabel6
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
+                    
         );
         //располагает и компоненты размеров вдоль вертикальной оси
         jPanel1Layout.setVerticalGroup(
