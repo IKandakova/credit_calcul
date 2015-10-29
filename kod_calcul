@@ -1,191 +1,184 @@
 package calculator_credit;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JTextField;
-public class credit extends javax.swing.JFrame {
+import javax.swing.DefaultComboBoxModel; //импортируем классы библиотеки SWING
+import javax.swing.JTextField; //импортируем классы библиотеки SWING
+//создание окон в библиотеке SWING, класс credit будет наследником класса JFrame
+public class credit extends javax.swing.JFrame { 
 	public credit() {
         Component();
-    }                          
+    }       
+	// создание 
     private void Component() {
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel(); 
         creditsum = new javax.swing.JTextField();
         creditperiod = new javax.swing.JComboBox();
-        percent = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        clearall = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        payment = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        calculate = new javax.swing.JButton();
-        totalsum = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        clearresult = new javax.swing.JButton();
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Кредитный калькулятор");
-        setBackground(new java.awt.Color(255, 255, 255));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setResizable(false);
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        creditsum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                creditsumActionPerformed(evt);
-            }
-        });
-        creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" }));
+        percent = new javax.swing.JTextField(); //процентная ставка
+        jLabel1 = new javax.swing.JLabel(); //cумма кредита
+        jLabel2 = new javax.swing.JLabel(); //cрок кредитования
+        jLabel3 = new javax.swing.JLabel(); //мес.
+        jLabel4 = new javax.swing.JLabel(); //процентная ставка
+        jLabel6 = new javax.swing.JLabel(); //%
+        clearall = new javax.swing.JButton(); //очистить все
+        jPanel2 = new javax.swing.JPanel(); //панель
+        payment = new javax.swing.JTextField(); //ежемесячный платеж
+        jLabel5 = new javax.swing.JLabel(); //ежемесячный платеж
+        calculate = new javax.swing.JButton(); //рассчитать
+        totalsum = new javax.swing.JTextField(); //сумма платежа
+        jLabel7 = new javax.swing.JLabel(); //cумма кредита
+        clearresult = new javax.swing.JButton(); //очистить результат
+        setTitle("Кредитный калькулятор"); //заголовок окна приложения
+        setResizable(false); // Нет изменения размеров окна
 
+      // заголовки 
+        creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" })); //параметры для списка
         jLabel1.setText("Сумма кредита:");
-
         jLabel2.setText("Срок кредитования:");
-
         jLabel3.setText("мес.");
-
         jLabel4.setText("Процентная ставка:");
-
         jLabel6.setText("%");
-
         clearall.setText("Очистить всё");
+        
+        //очистить все введенные данные и результат рассчета
         clearall.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearallActionPerformed(evt);
             }
         });
+        
+        //размещение компонентов на панели1
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
+        //располагает компоненты вдоль горизонтальной оси
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(clearall)
-                    .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3))
-                    .addComponent(jLabel4)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addContainerGap() // разрыв между краем контейнер и компонентами
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addComponent(jLabel1) //добавить компонент jlabel1
+                    .addComponent(clearall)//добавить компонент clearall
+                    .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)) //добавляет компонент creditsum с указанным размером
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED) //разрыв между самыми близкими компонентами
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addComponent(jLabel2)//добавить компонент jlabel2
+                    .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно	
+                        .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавляет компонент creditperiod с указанным размером
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                        .addComponent(jLabel3)) //добавить компонент jlabel3
+                    .addComponent(jLabel4)//добавить компонент jlabel4
+                    .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно	
+                    	.addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить percent
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                        .addComponent(jLabel6))) //добавить компонент jlabel6
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
         );
+        //располагает и компоненты размеров вдоль вертикальной оси
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(clearall, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(jPanel1Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addGap(13, 13, 13) //добавляет разрыв с размером 13
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE) //выравнивание для элементов группы
+                    .addComponent(jLabel1) //добавить компонент jlabel1
+                    .addComponent(jLabel2)) //добавить компонент jlabel2
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE) //выравнивание для элементов группы
+                    .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить компонент creditsum
+                    .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить компонент creditperiod
+                    .addComponent(jLabel3)) //добавить компонент jlabel3
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addGroup(jPanel1Layout.createSequentialGroup()  //располагает элементы последовательно, один за другим
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                        .addComponent(jLabel4) //добавить компонент jlabel4
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE) //выравнивание для элементов группы
+                            .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавляет компонент percent с указанным размером
+                            .addComponent(jLabel6))) //добавляет компонент label6
+                    .addGroup(jPanel1Layout.createSequentialGroup() //добавляет элементы последовательно, один за другим к этому Group
+                        .addGap(18, 18, 18) //lобавляет разрыв к этому Group с указанным размером 18
+                        .addComponent(clearall, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))) //добавляет компонент clearall с указанным размером
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //Добавляет элемент, представляющий разрыв между одним краем контейнера и следующим или предыдущим компонентом с указанным размером
         );
-	jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        payment.setEditable(false);
-                payment.setFocusable(false);
-        jLabel5.setText("Ежемесячный платеж:");
-        calculate.setText("Рассчитать");
-       
+        
+        jLabel5.setText("Ежемесячный платеж:"); //наименование элемента jLabel5
+        calculate.setText("Рассчитать"); //наименование элемента calculate
+      
+        //рассчитать сумму выплат и ежемесячный платеж по кредиту
         calculate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculateActionPerformed(evt);
             }
         });
-	totalsum.setEditable(false);
-        totalsum.setFocusable(false);
+        totalsum.setEditable(false); //недоступен для редактирования
         jLabel7.setText("Сумма выплаты:");
- 
         clearresult.setText("Очистить результат");
-       
+      
+       //очистить результат рассчета
         clearresult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearresultActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(payment)
-                    .addComponent(jLabel7)
-                    .addComponent(totalsum))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(clearresult)
-                    .addComponent(calculate))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        
+      //размещение компонентов на панели2
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2); //создает для jPanel2
+        jPanel2.setLayout(jPanel2Layout); //устанавливает панель
+        jPanel2Layout.setHorizontalGroup(  //располагает и компоненты размеров вдоль горизонтальной оси
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addContainerGap() // разрыв между краем контейнер и компонентами
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) ////добавить компонент jlabel5
+                    .addComponent(payment)//добавить компонент payment
+                    .addComponent(jLabel7) //добавить компонент jlabel7
+                    .addComponent(totalsum))//добавить компонент totalsum
+                .addGap(31, 31, 31) //добавляет разрыв с размером 31
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addComponent(clearresult) //добавить компонент clearresult
+                    .addComponent(calculate)) //добавить компонент calculate
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //Добавляет элемент, представляющий разрыв между одним краем контейнера и следующим или предыдущим компонентом с указанным размером
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(7, 7, 7)
+        jPanel2Layout.setVerticalGroup(       //располагает и компоненты размеров вдоль вертикальной оси
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addGap(8, 8, 8) //добавляет разрыв с размером 8
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING) //выравнивание для элементов группы
+                    .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                        .addComponent(jLabel5) //добавить компонент jlabel5
+                        .addGap(7, 7, 7) //добавляет разрыв с размером 7
                         .addComponent(payment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(clearresult, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel7)
+                    .addComponent(clearresult, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))//добавить компонент clearresult
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING) //выравнивание для элементов группы
+                    .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                        .addGap(6, 6, 6) //добавляет разрыв с размером 6
+                        .addComponent(jLabel7) //добавить компонент jlabel7
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(totalsum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(calculate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(totalsum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)) //добавить компонент totalsum
+                    .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //разрыв между самыми близкими компонентами
+                        .addComponent(calculate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))) //добавить компонент calculate
+                .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
         );
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+        layout.setHorizontalGroup(//располагает и компоненты размеров вдоль горизонтальной оси
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addContainerGap() // разрыв между краем контейнер и компонентами
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //добавить компонент jPanel1
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //добавить компонент jPanel2
+                .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
+            .addGroup(layout.createSequentialGroup() //располагает элементы последовательно, один за другим
+                .addContainerGap() //разрыв между одним краем контейнера и следующим или предыдущим компонентом
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить компонент jPanel1
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //добавить компонент jPanel2
+                .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
         );
         pack();
-    }                      
-    private void creditsumActionPerformed(java.awt.event.ActionEvent evt) {                                          
-    }                                        
+    }          
+    //рассчет платежа  
     private void calculateActionPerformed(java.awt.event.ActionEvent evt) {                                          
     double x;
     double s;
@@ -199,44 +192,48 @@ public class credit extends javax.swing.JFrame {
     s=Double.parseDouble(creditsum.getText());
     ps=Double.parseDouble(String.valueOf(percent.getText()));
     p=ps/100/12;
-    n=Double.parseDouble(String.valueOf(creditperiod.getSelectedItem()));
+    n=Math.round(Double.parseDouble(String.valueOf(creditperiod.getSelectedItem())));
     ip= 1+p;
     step=Math.pow(ip, n);
     x=s*(p+(p/(step-1)));
     a=Math.rint(100.0 * x)/100.0;
-    payment.setText(Double.toString(a)); //Math.rint(100.0 * d) / 100.0
-       t=Math.rint(100.0 * n)/100.0;
-    totalsum.setText(Double.toString(a*n));
-    }                                         
-
+    payment.setText(Double.toString(a)); //Math.rint(100.0 * d) / 100.0 
+    t=Math.rint(100.0 * n)/100.0;
+    totalsum.setText(Double.toString(a*n)); 
+    }  
+    
+    // очистить все
     private void clearallActionPerformed(java.awt.event.ActionEvent evt) {                                         
 creditsum.setText("");
 percent.setText("");
-creditperiod.setSelectedItem("4");
+creditperiod.setSelectedItem("4"); //устанавливает при очистке выбранный пункт
 payment.setText("");
 totalsum.setText("");
-    }                                        
-
+    }    
+    
+ // очистить результат
     private void clearresultActionPerformed(java.awt.event.ActionEvent evt) {                                            
         payment.setText("");
         totalsum.setText("");
-    }                                           
+    }             
+    
+   //основная функция
     public static void main(String args[]) {
-        try {
+        try { //блок кода, где отслеживаются ошибки
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName()); //установкf текущего стили от экземпляра LookAndFeelInfo
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) { //обрабатываем ошибку
+            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); //Конструкции с указанным сообщением детали и дополнительное исключение, которое было повышено
+        } catch (InstantiationException ex) {//обрабатываем ошибку
+            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); //приложение пытается создать экземпляр класса
+        } catch (IllegalAccessException ex) {//обрабатываем ошибку
+            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); //приложение пытается установить или получить поле
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) { //обрабатываем ошибку
+            java.util.logging.Logger.getLogger(credit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); //исключение, которое указывает на требуемый класс
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -245,7 +242,7 @@ totalsum.setText("");
             }
         });
     }
-    // Variables declaration - do not modify                     
+    // переменные - не изменяются                    
     private javax.swing.JButton calculate;
     private javax.swing.JButton clearall;
     private javax.swing.JButton clearresult;
