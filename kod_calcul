@@ -20,9 +20,7 @@ public class credit extends javax.swing.JFrame {
         clearall = new javax.swing.JButton(); //очистить все
         jPanel2 = new javax.swing.JPanel(); //панель
         payment = new javax.swing.JTextField(); //ежемесячный платеж
-        jLabel5 = new javax.swing.JLabel(); //ежемесячный платеж
-        calculate = new javax.swing.JButton(); //рассчитать
-        totalsum = new javax.swing.JTextField(); //сумма платежа
+        
         jLabel7 = new javax.swing.JLabel(); //cумма кредита
         clearresult = new javax.swing.JButton(); //очистить результат
         setTitle("Кредитный калькулятор"); //заголовок окна приложения
@@ -79,15 +77,7 @@ public class credit extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE) //выравнивание для элементов группы
                     .addComponent(creditsum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить компонент creditsum
                     .addComponent(creditperiod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавить компонент creditperiod
-                    .addComponent(jLabel3)) //добавить компонент jlabel3
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-                    .addGroup(jPanel1Layout.createSequentialGroup()  //располагает элементы последовательно, один за другим
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
-                        .addComponent(jLabel4) //добавить компонент jlabel4
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED) //разрыв между самыми близкими компонентами
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE) //выравнивание для элементов группы
-                         .addComponent(percent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE) //добавляет компонент percent с указанным размером
-                            .addComponent(jLabel6))) //добавляет компонент label6
+                 
                     .addGroup(jPanel1Layout.createSequentialGroup() //добавляет элементы последовательно, один за другим к этому Group
                         .addGap(18, 18, 18) //lобавляет разрыв к этому Group с указанным размером 18
                         .addComponent(clearall, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))) //добавляет компонент clearall с указанным размером
@@ -149,17 +139,12 @@ public class credit extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE) //разрыв между самыми близкими компонентами
                         .addComponent(calculate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))) //добавить компонент calculate
-                .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
-        );
+                .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом);
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(//располагает и компоненты размеров вдоль горизонтальной оси
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-            .addGroup(layout.createSequentialGroup() //располагает элементы последовательно, один за другим
-                .addContainerGap() // разрыв между краем контейнер и компонентами
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING) //выравнивание для элементов группы
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)  //добавить компонент jPanel1
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)) //добавить компонент jPanel2
+           
                 .addContainerGap()) //разрыв между одним краем контейнера и следующим или предыдущим компонентом
         );
          layout.setVerticalGroup(
