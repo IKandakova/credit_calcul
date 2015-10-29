@@ -138,9 +138,7 @@ public class credit extends javax.swing.JFrame {
                 .addGap(8, 8, 8) //добавляет разрыв с размером 8
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING) //выравнивание для элементов группы
                     .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
-                        .addComponent(jLabel5) //добавить компонент jlabel5
-                        .addGap(7, 7, 7) //добавляет разрыв с размером 7
-                        .addComponent(payment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                      
                     .addComponent(clearresult, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))//добавить компонент clearresult
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING) //выравнивание для элементов группы
                     .addGroup(jPanel2Layout.createSequentialGroup() //располагает элементы последовательно, один за другим
