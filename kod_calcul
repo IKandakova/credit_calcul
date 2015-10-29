@@ -1,4 +1,4 @@
-package calculator_credit;
+package calculator_cred;
 import javax.swing.DefaultComboBoxModel; //импортируем классы библиотеки SWING
 import javax.swing.JTextField; //импортируем классы библиотеки SWING
 //создание окон в библиотеке SWING, класс credit будет наследником класса JFrame
