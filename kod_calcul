@@ -6,7 +6,7 @@ public class credit extends javax.swing.JFrame {
 	public credit() {
         Component();
     }       
-	// создание 
+	// компоненты программы 
     private void Component() {
         jPanel1 = new javax.swing.JPanel(); 
         creditsum = new javax.swing.JTextField();
