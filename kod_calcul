@@ -240,9 +240,7 @@ totalsum.setText("");
     // переменные - не изменяются                    
     private javax.swing.JButton calculate;
     private javax.swing.JButton clearall;
-    private javax.swing.JButton clearresult;
-    private javax.swing.JComboBox creditperiod;
-    private javax.swing.JTextField creditsum;
+    
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
