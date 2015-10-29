@@ -107,12 +107,7 @@ public class credit extends javax.swing.JFrame {
         jLabel7.setText("Сумма выплаты:");
         clearresult.setText("Очистить результат");
       
-       //очистить результат рассчета
-        clearresult.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearresultActionPerformed(evt);
-            }
-        });
+       
         
       //размещение компонентов на панели2
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2); //создает для jPanel2
