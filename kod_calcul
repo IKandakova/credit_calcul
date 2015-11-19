@@ -35,6 +35,7 @@ public class credit extends javax.swing.JFrame {
         setTitle("Кредитный калькулятор"); //заголовок окна приложения
         setResizable(false); // Нет изменения размеров окна
               // задание параметров для компонентов  jLabel и ComboBox
+              // заголовки
         creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" })); //параметры для списка
         jLabel1.setText("Сумма кредита: (вод числа)");
         jLabel2.setText("Срок кредитования:");
