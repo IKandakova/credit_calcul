@@ -35,10 +35,10 @@ public class credit extends javax.swing.JFrame {
         setResizable(false); // Нет изменения размеров окна
               // задание параметров для компонентов  jLabel и ComboBox
         creditperiod.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4", "6", "12", "24", "36", "48", "60" })); //параметры для списка
-        jLabel1.setText("Сумма кредита: (введите цифры)");
+        jLabel1.setText("Сумма кредита: (вод числа)");
         jLabel2.setText("Срок кредитования:");
         jLabel3.setText("мес.");
-        jLabel4.setText("Процентная ставка: (введите цифры)");
+        jLabel4.setText("Процентная ставка: (ввод числа)");
         jLabel6.setText("%");
         clearall.setText("Очистить всё");
         //очистить все введенные данные и результат рассчета
